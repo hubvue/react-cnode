@@ -1,0 +1,28 @@
+{
+  "name": "react-cnode",
+  "version": "1.0.0",
+  "description": "使用React+Koa防一个cnode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hubvue/react-cnode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hubvue/react-cnode/issues"
+  },
+  "homepage": "https://github.com/hubvue/react-cnode#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-simple-router": "^0.2.0"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
