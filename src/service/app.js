@@ -3,6 +3,7 @@ const app = new Koa();
 const views = require("koa-views");
 const staticFile = require("koa-static");
 const config = require("./config/index");
+const historyApiFallback = reqire('koa-history-api-fallback');
 const ErrorHandle = require("./middlewares/ErrorHandle");
 const logHandle = require("./middlewares/LogHandle")();
 
@@ -15,10 +16,18 @@ app.use(views(__dirname+ "/views"))
 //静态文件
 app.use(staticFile(__dirname));
 
+//history-api-fallback
+app.use(historyApiFallback({
+    rewrites: [
+        // {from: /\//}
+    ]
+}))
+
 //日志
 //路由
 const router = require("./routes/index");
 router(app);
+
 
 
 
