@@ -1,6 +1,7 @@
 :root {
   --size: 50px;
   --main-color: #444;
+  --main-margin:15%;
 
   --fix: {
     content: "";
@@ -15,25 +16,11 @@
   }
 }
 
-img {
-  width: 100%;
-  hegiht: 100%;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:after,
-*:before {
-  box-sizing: inherit;
-}
 
 .header {
   height: var(--size);
   background-color: var(--main-color);
-  padding: 0 15%;
+  padding: 0 var(--main-margin);
 }
 
 .header__navBar {
@@ -51,9 +38,10 @@ html {
 
   & .navBar__nav {
     margin: 0;
-    width: 440px;
+    width: 300px;
     height: 100%;
-    border: 1px solid red;
+    @apply --centered;
+    justify-content:space-around;
   }
 }
 
@@ -111,4 +99,14 @@ html {
   & input:focus {
     background: #fff;
   }
+}
+
+.navBar__nav {
+    & li a {
+        color:#ccc;
+        text-decoration:none;
+    }
+    & >li>a:hover {
+        color:#fff;
+    }
 }

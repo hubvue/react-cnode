@@ -1,8 +1,19 @@
 import React from "react";
+import {connect} from "react-redux";
 
+const mapStateToProps = (state,props) => {
+    return {
 
-const TopicController = () => {
-    return <h1>TopicContainer</h1>
+    }
 }
+
+const mapDispatchToProps = (dispatch,props) => {
+    return {
+
+    }
+}
+
+
+
 
 export default TopicController;

@@ -3,22 +3,26 @@ import "./index.css"
 
 const Hander = () => {
     return (
-        <div className="header">
+        <header className="header">
             <div className="header__navBar">
                 <div className="navBar__search">
                     <a href="/">
-                        <img src="http://static2.cnodejs.org/public/images/cnodejs_light.svg" alt=""/>
+                        <img src="http://static2.cnodejs.org/public/images/cnodejs_light.svg" alt="" />
                         <span className="search_icon"></span>
                     </a>
                     <form action="" method="get">
-                        <input type="text"/>
+                        <input type="text" />
                     </form>
                 </div>
-                <ul className="navBar__nav">
-                    nav
-                </ul>
+                <nav>
+                    <ul className="navBar__nav">
+                        <li><a href="/" rel="noopener noreferrer">首页</a></li>
+                        <li><a href="http://" rel="noopener noreferrer">新手入门</a></li>
+                        <li><a href="http://" rel="noopener noreferrer">关于</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
+        </header>
     )
 }
 

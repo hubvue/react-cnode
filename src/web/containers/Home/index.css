@@ -1,13 +1,14 @@
-:root {
-    --color:green;
-
-    --centered: {
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+img {
+  width: 100%;
+  hegiht: 100%;
 }
-h1{
-    color:var(--color);
-    @apply --centered;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
 }

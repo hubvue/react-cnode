@@ -8,7 +8,7 @@ const config = {
     output: {
         filename: "assets/scripts/[name].js",
         path: resolve("dist"),
-        publicPath: "./"
+        publicPath: "../"
     }
 }
 
@@ -16,7 +16,10 @@ module.exports = merge([
     config,
     parts.devServe({
         options:{
-            contentBase: './'
+            contentBase: './dist',
+            writeToDisk: true,          //写到硬盘里
+            // historyApiFallback: true,   //HTML5 History API
+            overlay:true                //在浏览器上显示错误
         }
     }),
     parts.loadCSS({
