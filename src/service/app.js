@@ -3,7 +3,7 @@ const app = new Koa();
 const views = require("koa-views");
 const staticFile = require("koa-static");
 const config = require("./config/index");
-const historyApiFallback = reqire('koa-history-api-fallback');
+const { historyApiFallback } = require('koa2-connect-history-api-fallback');
 const ErrorHandle = require("./middlewares/ErrorHandle");
 const logHandle = require("./middlewares/LogHandle")();
 
@@ -18,11 +18,17 @@ app.use(staticFile(__dirname));
 
 //history-api-fallback
 app.use(historyApiFallback({
-    rewrites: [
-        // {from: /\//}
+    whiteList:[
+        '/',
+        '/topics',
+        '/topics/ask',
+        '/topics/share',
+        '/topics/job',
+        '/topics/good',
+        '/topic/:id',
+        '/user/:id'
     ]
 }))
-
 //日志
 //路由
 const router = require("./routes/index");

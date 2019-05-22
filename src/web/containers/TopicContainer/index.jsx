@@ -1,9 +1,9 @@
 import React from "react";
 import {connect} from "react-redux";
-
+import MainContainer from "../../components/MainContainer/index";
 const mapStateToProps = (state,props) => {
     return {
-
+        
     }
 }
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch,props) => {
 
 
 
-export default TopicController;
+export default connect(mapStateToProps,mapDispatchToProps)(MainContainer);

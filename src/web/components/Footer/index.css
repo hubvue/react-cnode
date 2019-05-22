@@ -3,8 +3,7 @@
 }
 .footer{
     height:200px;
-    margin-top:800px;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,.5);
     text-align:center;
     line-height:200px;
+    background-color:#fff;
 }

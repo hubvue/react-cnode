@@ -1,3 +1,6 @@
+:root {
+  --body-color:#e1e1e1;
+}
 img {
   width: 100%;
   hegiht: 100%;
@@ -11,4 +14,8 @@ html {
 *:after,
 *:before {
   box-sizing: inherit;
+}
+
+body{
+    background-color:var(--body-color);
 }
