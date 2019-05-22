@@ -1,0 +1,13 @@
+:root {
+    --color:red;
+
+    --centered: {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+h1{
+    color:var(--color);
+    @apply --centered;
+}
