@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const config = require("../config/index");
 const {URLSearchParams} = require("url");
+const logHandle = require("../middlewares/LogHandle")();
 
 /**
  * 
@@ -29,6 +30,7 @@ class SafeRequest {
             }).then(data => {
                 resolve(data);
             }).catch(e=> {
+                logHandle.error(e);
                 reject("与后端接口异常");
             })
         }).catch(e=>e);

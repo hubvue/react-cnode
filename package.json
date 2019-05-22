@@ -20,7 +20,8 @@
   "homepage": "https://github.com/hubvue/react-cnode#readme",
   "dependencies": {
     "koa": "^2.7.0",
-    "koa-simple-router": "^0.2.0"
+    "koa-simple-router": "^0.2.0",
+    "log4js": "^4.2.0"
   },
   "devDependencies": {
     "node-fetch": "^2.6.0"

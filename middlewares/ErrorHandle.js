@@ -4,6 +4,7 @@ const errorHandle = {
             try{
                 await next();
             } catch(error) {
+                logger.error('500错误:'+error);
                 ctx.body = '服务器开小差了！'
             }
         })
