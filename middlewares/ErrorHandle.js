@@ -1,6 +1,13 @@
 const errorHandle = {
     error(app,logger) {
-
+        app.use(async (ctx, next) => {
+            try{
+                await next();
+            } catch(error) {
+                ctx.body = '服务器开小差了！'
+            }
+        })
+        //404容错
         app.use(async (ctx,next) => {
             await next();
             if(404 !== ctx.status){
