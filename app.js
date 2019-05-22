@@ -7,7 +7,7 @@ const ErrorHandle = require("./middlewares/ErrorHandle");
 const router = require("./routes/index");
 router(app);
 
-//容错
+//404和500容错
 ErrorHandle.error(app);
 
 
