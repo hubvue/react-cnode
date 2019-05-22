@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "nodemon ./dist/app.js",
     "client:dev": "webpack --mode development",
-    "client:prod": "webpack --mode production"
+    "client:prod": "webpack --mode production",
+    "client:dev:server": "webpack-dev-server --mode development --hot --open",
+    "server:prod": "gulp"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
   "dependencies": {
     "koa": "^2.7.0",
     "koa-simple-router": "^0.2.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0",
     "log4js": "^4.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -48,6 +52,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.32.0",
     "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
     "webpack-merge": "^4.2.1"
   }
 }

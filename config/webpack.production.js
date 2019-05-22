@@ -10,7 +10,7 @@ const config = {
     output: {
         filename: "assets/scripts/[name]-[chunkHash:5].js",
         path: resolve("dist"),
-        publicPath: "../"
+        publicPath: "./"
     },
     optimization: {
         runtimeChunk: {
@@ -24,6 +24,8 @@ module.exports = merge([
     parts.miniExtractCSS({
         uses: [{
             loader: "postcss-loader"
-        }]
+        }],
+        filename: "assets/styles/[name]-[chunkhash:5].css",
+        chunkFilename: "assets/styles/[id]-[chunkhash:5].css"
     }),
 ])

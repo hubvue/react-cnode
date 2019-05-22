@@ -1,17 +1,24 @@
 const Koa = require("koa");
 const app = new Koa();
-
+const views = require("koa-views");
+const staticFile = require("koa-static");
 const config = require("./config/index");
 const ErrorHandle = require("./middlewares/ErrorHandle");
-//日志
 const logHandle = require("./middlewares/LogHandle")();
-//路由
-const router = require("./routes/index");
-router(app);
 
 //404和500容错
 ErrorHandle.error(app,logHandle);
 
+//输出模板html
+app.use(views(__dirname+ "/views"))
+
+//静态文件
+app.use(staticFile(__dirname));
+
+//日志
+//路由
+const router = require("./routes/index");
+router(app);
 
 
 

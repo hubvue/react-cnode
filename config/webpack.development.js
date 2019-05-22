@@ -8,13 +8,17 @@ const config = {
     output: {
         filename: "assets/scripts/[name].js",
         path: resolve("dist"),
-        publicPath: "../"
+        publicPath: "./"
     }
 }
 
 module.exports = merge([
     config,
-    parts.devServe(),
+    parts.devServe({
+        options:{
+            contentBase: './'
+        }
+    }),
     parts.loadCSS({
         uses: [{
             loader: "postcss-loader"

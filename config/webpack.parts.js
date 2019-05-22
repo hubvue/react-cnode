@@ -20,7 +20,14 @@ exports.loadCSS = ({ reg = /\.css$/, include, exclude, uses = [] } = {}) => ({
  * 解析CSS模块，分离CSS---生产环境
  */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-exports.miniExtractCSS = ({ reg = /\.css$/, include, exclude, uses = [] } = {}) => ({
+exports.miniExtractCSS = ({ 
+    reg = /\.css$/, 
+    include, 
+    exclude, 
+    uses = [],
+    filename='[name]-[chunkhash:5].css', 
+    chunkFilename = '[id]-[chunkhash:5].css' 
+} = {}) => ({
     module: {
         rules: [{
             test: reg,
@@ -36,8 +43,8 @@ exports.miniExtractCSS = ({ reg = /\.css$/, include, exclude, uses = [] } = {}) 
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "assets/styles/[name]-[chunkhash:5].css",
-            chunkFilename: "assets/styles/[id]-[chunkhash:5].css"
+            filename,
+            chunkFilename,
         })
     ]
 })
