@@ -1,0 +1,53 @@
+:root {
+
+}
+.topic__item{
+    display:flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    & > * {
+        margin-right:5px;
+    }
+    & .item__image{
+        width: 30px;
+        height: 30px;
+    }
+    & .item__num {
+        font-size:14px;
+    }
+    & .item__num :nth-child(1){
+        color:#9e78c0;
+        margin-right:2px;
+    }
+    & .item__num :nth-child(2){
+        font-size:12px;
+        color:#b4b4b4;
+        margin-left:2px;
+    }
+    & .item_category{
+        background-color:#80bd01;
+        padding:3px 4px;
+        font-size:12px;
+        color:#fff;
+        border-radius:3px;
+    }
+    & .item__title {
+        flex:2;
+    }
+    & .item__title a {
+        color: #888;
+        text-decoration:none;
+        font-size:17px;
+    }
+    & .item__title a:hover{
+        text-decoration:underline;
+    }
+    & .item__newreply{
+        color:#778087;
+        font-size:12px;
+    }
+    &:hover{
+        background-color:#f5f5f5;
+    }
+}

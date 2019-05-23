@@ -29,8 +29,7 @@
 }
 .container .content{
     width:100%;
-    height:500px;
-    border-radius:5px;
+    border-radius:6px;
 }
 .content{
     background-color:#fff;

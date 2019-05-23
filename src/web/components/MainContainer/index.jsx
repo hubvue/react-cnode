@@ -14,11 +14,11 @@ class MainContainer extends Component {
                     <div className="content">
                         <NavBar />
                         <Switch>
-                            <Route exact path="/" render={() => <TopicList {...this.props.children} type="all"/>} />
-                            <Route path="/good" render={() => <TopicList  {...this.props.children} type="good"/>} />
-                            <Route path="/share" render={() => <TopicList  {...this.props.children} type="share"/>} />
-                            <Route path="/ask" render={() => <TopicList {...this.props.children} type="ask" />}/>
-                            <Route path="/job" render={() => <TopicList {...this.props.children} type="job"/>}  />
+                            <Route exact path="/" render={() => <TopicList {...this.props.children} type="all" />} />
+                            <Route path="/good" render={() => <TopicList  {...this.props.children} type="good" />} />
+                            <Route path="/share" render={() => <TopicList  {...this.props.children} type="share" />} />
+                            <Route path="/ask" render={() => <TopicList {...this.props.children} type="ask" />} />
+                            <Route path="/job" render={() => <TopicList {...this.props.children} type="job" />} />
                         </Switch>
                     </div>
                 </div>

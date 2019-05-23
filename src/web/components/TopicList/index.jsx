@@ -1,11 +1,24 @@
-import React from "react";
+import React,{Component} from "react";
+import "./index.css";
+import Topic from "../Topic/index";
+class TopicList extends Component{
+    constructor(props){
+        super(props);
+    }
 
-
-const TopicList = ({type}) => {
-    console.log(1);
-    return (
-        <h1>hello:{type}</h1>
-    )
+    render(){
+        let arr = [];
+        arr.length = 40;
+        let topics = [];
+        for(let i = 0; i < arr.length; i ++) {
+            topics.push(<Topic  key={i}/>)
+        }
+        return (
+            <div className="content__topic">
+                {topics}
+            </div>
+        )
+    }
 }
 
 export default TopicList;

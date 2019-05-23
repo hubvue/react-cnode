@@ -1,0 +1,27 @@
+.content__nav{
+    background-color:#f6f6f6; 
+    padding: 10px;   
+    border-radius: 6px 6px 0 0 ;
+}
+.content__nav__list{
+    display:flex;
+    align-items: center;
+    & .nav__list__item{
+        margin-right:25px;
+        color: #80bd01;
+        padding:3px;
+
+    }
+    & .nav__list__item a {
+        text-decoration: none;
+        color: inherit;
+    }
+    & .nav__list__item:hover {
+        color: #005580;
+    }
+    & .nav__list__item_action{
+        background-color:#80bd01;
+        color:#fff;
+        border-radius:2px;
+    }
+}
