@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./index.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "../NavBar/index";
-import TopicList from "../TopicList/index";
+import TopicList from "../../containers/TopicList/index";
 class MainContainer extends Component {
     constructor(props) {
         super(props);

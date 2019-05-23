@@ -9,7 +9,8 @@ const config = {
         filename: "assets/scripts/[name].js",
         path: resolve("dist"),
         publicPath: "../"
-    }
+    },
+    devtool: "source-map"
 }
 
 module.exports = merge([

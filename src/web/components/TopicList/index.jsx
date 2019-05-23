@@ -1,20 +1,30 @@
-import React,{Component} from "react";
-import "./index.css";
+import React,{Component,Suspense} from "react";
 import Topic from "../Topic/index";
 class TopicList extends Component{
     constructor(props){
         super(props);
+        this.state = {
+            topics: [],
+        }
+        if(this.props.type === 'all'){
+            console.log(this.props.state.Topics);
+            this.props.state.Topics.length !==0 ? this.setState({
+                topics: this.props.state.Topics
+    
+            }) : fetch("http://127.0.0.1:8080/topics").then(res=> res.json()).then(data => {
+                    this.setState({
+                        topics:data.data,
+                    });
+                    this.props.setData('all',data.data);
+                })
+            
+        }
     }
 
     render(){
-        let arr = [];
-        arr.length = 40;
-        let topics = [];
-        for(let i = 0; i < arr.length; i ++) {
-            topics.push(<Topic  key={i}/>)
-        }
+        let topics = this.state.topics.map((topic,idx) => <Topic key={topic.id}  {...topic}/> )
         return (
-            <div className="content__topic">
+            <div className="content__topic" topics={topics}>
                 {topics}
             </div>
         )

@@ -3,12 +3,12 @@ import "./index.css";
 
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/index";
-import TopicContainer from "../TopicContainer/index"; 
+import MainContainer from "../../components/MainContainer/index"; 
 const App = () => {
     return (
         <>
             <Header />
-            <TopicContainer/>
+            <MainContainer/>
             <Footer />
         </>
     )
