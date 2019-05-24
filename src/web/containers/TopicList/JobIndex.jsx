@@ -9,6 +9,7 @@ import {
 const mapStateToProps = (state, props) => {
     return {
         topics: state.topicCategory.job,
+        cate: state.cate
     }
 }
 

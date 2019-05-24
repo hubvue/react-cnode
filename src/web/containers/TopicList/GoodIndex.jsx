@@ -10,6 +10,7 @@ import {
 const mapStateToProps = (state,props) => {
     return {
         topics: state.topicCategory.good,
+        cate: state.cate,
     }
 };
 

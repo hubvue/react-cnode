@@ -9,7 +9,8 @@ import {
 
 const mapStateToProps = (state,props) => {
     return {
-        topics:state.topicCategory.share
+        topics:state.topicCategory.share,
+        cate: state.cate
     }
 }
 
