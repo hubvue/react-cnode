@@ -8,14 +8,14 @@ import {
 
 const mapStateToProps = (state, props) => {
     return {
-        data: state.topicCategory.job,
+        topics: state.topicCategory.job,
     }
 }
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        setData: (data) => {
-            dispatch(actionJob(data));
+        setData: (page, data) => {
+            dispatch(actionJob(page, data));
         }
     }
 }

@@ -9,14 +9,14 @@ import {
 
 const mapStateToProps = (state,props) => {
     return {
-        data: state.topicCategory.good,
+        topics: state.topicCategory.good,
     }
 };
 
 const mapDispatchToProps = (dispatch,props) => {
     return {
-        setData: (data) => {
-            dispatch(actionGood(data));
+        setData: (page, data) => {
+            dispatch(actionGood(page, data));
         }
     }
 }

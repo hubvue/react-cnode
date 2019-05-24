@@ -9,14 +9,14 @@ import {
 
 const mapStateToProps = (state,props) => {
     return {
-        data:state.topicCategory.share
+        topics:state.topicCategory.share
     }
 }
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        setData: (data) => {
-            dispatch(actionShare(data));
+        setData: (page, data) => {
+            dispatch(actionShare(page, data));
         }
     }
 }

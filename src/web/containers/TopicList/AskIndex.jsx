@@ -6,13 +6,13 @@ import {
 } from "../../actions/index";
 const mapStateToProps = (state,props) => {
     return {
-        data: state.topicCategory.ask,
+        topics: state.topicCategory.ask,
     }
 };
 const mapDispatchToProps = (dispatch,props) => {
     return {
-        setData: (data) => {
-            dispatch(actionAsk(data));
+        setData: (page, data) => {
+            dispatch(actionAsk(page, data));
         }
     }
 }

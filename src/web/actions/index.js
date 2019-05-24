@@ -9,10 +9,11 @@ import {
 } from "../constants/index";
 
 const actionFactory = (type) => {
-    return (data) => {
+    return (page,data) => {
         return {
             type,
             data,
+            page
         }
     }
 };

@@ -13,22 +13,27 @@ const initial = {
     users: [
 
     ],
-    Topics: [
-
-    ],
+    Topics: {
+        page: 0,
+        data: []
+    },
     topicCategory: {
-        job: [
-
-        ],
-        good: [
-
-        ],
-        share: [
-
-        ],
-        ask: [
-
-        ]
+        job: {
+            page: 0,
+            data: []
+        },
+        good: {
+            page: 0,
+            data: []
+        },
+        share: {
+            page: 0,
+            data: []
+        },
+        ask: {
+            page: 0,
+            data: []
+        },
     },
     articlesDetails: {
         "5cbfd9aca86ae80ce64b3175" : {
@@ -45,7 +50,10 @@ const reducer = (state = initial, action ) =>{
         case GETASK : {
             return Object.assign(state, {
                 topicCategory:Object.assign(state.topicCategory,{
-                    ask: action.data,
+                    ask:{
+                        page:action.page,
+                        data: action.data,
+                    }
                 })
             })
         }
@@ -55,27 +63,39 @@ const reducer = (state = initial, action ) =>{
         case GETGOOD : {
             return Object.assign(state, {
                 topicCategory:Object.assign(state.topicCategory,{
-                    good: action.data,
+                    good: {
+                        page:action.page,
+                        data: action.data,
+                    }
                 })
             })
         }
         case GETJOB : {
             return Object.assign(state, {
                 topicCategory:Object.assign(state.topicCategory,{
-                    job: action.data,
+                    job: {
+                        page:action.page,
+                        data: action.data,
+                    }
                 })
             })
         }
         case GETSHARE : {
             return Object.assign(state, {
                 topicCategory:Object.assign(state.topicCategory,{
-                    share: action.data,
+                    share: {
+                        page:action.page,
+                        data: action.data,
+                    }
                 })
             })
         }
         case GETTOPICS : {
             return Object.assign(state,{
-                Topics:action.data
+                Topics:{
+                    page: action.page,
+                    data: action.data
+                }
             })
         }
         default:{

@@ -6,14 +6,14 @@ import {
 } from "../../actions/index";
 const mapStateToProps = (state,props) => {
     return {
-        data: state.Topics,
+        topics: state.Topics,
     }
 }
 
 const mapDispatchToProps = (dispatch,props) => {
     return {
-        setData: (data) => {
-            dispatch(actionTopics(data));
+        setData: (page,data) => {
+            dispatch(actionTopics(page,data));
         }
     }
 }
