@@ -5,10 +5,11 @@ import {
     GETJOB,
     GETSHARE,
     GETTOPICS,
-    GETUSER
+    GETUSER,
+    CHANGECATE,
 } from "../constants/index";
 
-const actionFactory = (type) => {
+const actionTopicFactory = (type) => {
     return (page,data) => {
         return {
             type,
@@ -18,14 +19,20 @@ const actionFactory = (type) => {
     }
 };
 
-const actionAsk = actionFactory(GETASK);
-const actionDetail = actionFactory(GETDETAIL);
-const actionGood = actionFactory(GETGOOD);
-const actionJob = actionFactory(GETJOB)
-const actionShare = actionFactory(GETSHARE);
-const actionTopics = actionFactory(GETTOPICS);
-const actionUser = actionFactory(GETUSER);
+const actionAsk = actionTopicFactory(GETASK);
+const actionDetail = actionTopicFactory(GETDETAIL);
+const actionGood = actionTopicFactory(GETGOOD);
+const actionJob = actionTopicFactory(GETJOB)
+const actionShare = actionTopicFactory(GETSHARE);
+const actionTopics = actionTopicFactory(GETTOPICS);
+const actionUser = actionTopicFactory(GETUSER);
 
+const actionChangeCate = (cate)=> {
+    return {
+        type: CHANGECATE,
+        data:cate
+    }
+}
 export {
     actionAsk,
     actionDetail,
@@ -33,5 +40,6 @@ export {
     actionJob,
     actionShare,
     actionTopics,
-    actionUser
+    actionUser,
+    actionChangeCate
 }

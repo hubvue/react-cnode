@@ -5,11 +5,13 @@ import {
     GETGOOD,
     GETJOB,
     GETSHARE,
-    GETTOPICS
+    GETTOPICS,
+    CHANGECATE
 } from "../constants/index";
 
 
 const initial = {
+    cate: "all",
     users: [
 
     ],
@@ -96,6 +98,11 @@ const reducer = (state = initial, action ) =>{
                     page: action.page,
                     data: action.data
                 }
+            })
+        }
+        case CHANGECATE: {
+            return Object.assign(state,{
+                cate:action.data
             })
         }
         default:{

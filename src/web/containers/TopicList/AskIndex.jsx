@@ -7,6 +7,7 @@ import {
 const mapStateToProps = (state,props) => {
     return {
         topics: state.topicCategory.ask,
+        cate: state.cate,
     }
 };
 const mapDispatchToProps = (dispatch,props) => {

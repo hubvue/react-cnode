@@ -6,3 +6,5 @@ export const GETGOOD="GETGOOD";
 export const GETSHARE="GETSHARE";
 export const GETASK="GETASK";
 export const GETDETAIL="GETDETAIL";
+
+export const CHANGECATE = "CHANGECATE"

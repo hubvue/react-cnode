@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./index.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "../NavBar/index";
+import NavBar from "../../containers/NavBar";
 import AllIndex from "../../containers/TopicList/AllIndex";
 import AskIndex from "../../containers/TopicList/AskIndex"
 import GoodIndex from "../../containers/TopicList/GoodIndex";
