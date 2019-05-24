@@ -11,12 +11,13 @@ class MainContainer extends Component {
     constructor(props) {
         super(props);
     }
+    
     render() {
         return (
             <main className="main">
                 <div className="container">
                     <div className="content">
-                        <NavBar />
+                        <NavBar/>
                         <Switch>
                             <Route exact path="/"  component={AllIndex} />
                             <Route path="/good" component={GoodIndex} />

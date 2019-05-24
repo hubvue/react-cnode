@@ -43,22 +43,40 @@ const reducer = (state = initial, action ) =>{
 
         }
         case GETASK : {
-
+            return Object.assign(state, {
+                topicCategory:Object.assign(state.topicCategory,{
+                    ask: action.data,
+                })
+            })
         }
         case GETDETAIL : {
             
         }
         case GETGOOD : {
-            
+            return Object.assign(state, {
+                topicCategory:Object.assign(state.topicCategory,{
+                    good: action.data,
+                })
+            })
         }
         case GETJOB : {
-            
+            return Object.assign(state, {
+                topicCategory:Object.assign(state.topicCategory,{
+                    job: action.data,
+                })
+            })
         }
         case GETSHARE : {
-            
+            return Object.assign(state, {
+                topicCategory:Object.assign(state.topicCategory,{
+                    share: action.data,
+                })
+            })
         }
         case GETTOPICS : {
-            
+            return Object.assign(state,{
+                Topics:action.data
+            })
         }
         default:{
             return state;

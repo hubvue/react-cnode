@@ -13,9 +13,11 @@ const mapStateToProps = (state,props) => {
     }
 }
 
-const mapDispatchToProps = (state, props) => {
+const mapDispatchToProps = (dispatch, props) => {
     return {
-
+        setData: (data) => {
+            dispatch(actionShare(data));
+        }
     }
 }
 

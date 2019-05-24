@@ -11,8 +11,8 @@ const mapStateToProps = (state,props) => {
 };
 const mapDispatchToProps = (dispatch,props) => {
     return {
-        setAsk: () => {
-
+        setData: (data) => {
+            dispatch(actionAsk(data));
         }
     }
 }

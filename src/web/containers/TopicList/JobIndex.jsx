@@ -14,7 +14,9 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-
+        setData: (data) => {
+            dispatch(actionJob(data));
+        }
     }
 }
 
