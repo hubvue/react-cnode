@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import "./index.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "../NavBar/index";
-import TopicList from "../../containers/TopicList/index";
+import AllIndex from "../../containers/TopicList/AllIndex";
+import AskIndex from "../../containers/TopicList/AskIndex"
+import GoodIndex from "../../containers/TopicList/GoodIndex";
+import JobIndex from "../../containers/TopicList/JobIndex";
+import ShareIndex from "../../containers/TopicList/ShareIndex";
 class MainContainer extends Component {
     constructor(props) {
         super(props);
@@ -14,11 +18,11 @@ class MainContainer extends Component {
                     <div className="content">
                         <NavBar />
                         <Switch>
-                            <Route exact path="/" render={() => <TopicList {...this.props.children} type="all" />} />
-                            <Route path="/good" render={() => <TopicList  {...this.props.children} type="good" />} />
-                            <Route path="/share" render={() => <TopicList  {...this.props.children} type="share" />} />
-                            <Route path="/ask" render={() => <TopicList {...this.props.children} type="ask" />} />
-                            <Route path="/job" render={() => <TopicList {...this.props.children} type="job" />} />
+                            <Route exact path="/"  component={AllIndex} />
+                            <Route path="/good" component={GoodIndex} />
+                            <Route path="/share" component={ShareIndex} />
+                            <Route path="/ask" component={AskIndex} />
+                            <Route path="/job" component={JobIndex} />
                         </Switch>
                     </div>
                 </div>

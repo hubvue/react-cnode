@@ -28,11 +28,14 @@
         margin-left:2px;
     }
     & .item_category{
-        background-color:#80bd01;
         padding:3px 4px;
         font-size:12px;
         color:#fff;
         border-radius:3px;
+        background-color:#80bd01;
+    }
+    & .item_category_usual{
+        background-color:#e5e5e5;
     }
     & .item__title {
         flex:2;

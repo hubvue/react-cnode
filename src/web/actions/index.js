@@ -17,7 +17,7 @@ const actionFactory = (type) => {
     }
 };
 
-const actionTask = actionFactory(GETASK);
+const actionAsk = actionFactory(GETASK);
 const actionDetail = actionFactory(GETDETAIL);
 const actionGood = actionFactory(GETGOOD);
 const actionJob = actionFactory(GETJOB)
@@ -26,7 +26,7 @@ const actionTopics = actionFactory(GETTOPICS);
 const actionUser = actionFactory(GETUSER);
 
 export {
-    actionTask,
+    actionAsk,
     actionDetail,
     actionGood,
     actionJob,
