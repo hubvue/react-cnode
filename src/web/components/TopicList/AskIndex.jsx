@@ -4,7 +4,7 @@ import PageDevice from "../PageDevice/index";
 import {
     actionAsk
 } from "../../actions/index"
-
+import "./index.css";
 
 class AskIndex extends Component {
     constructor(props) {
@@ -40,7 +40,7 @@ class AskIndex extends Component {
 
     render() {
         return (
-            <div>
+            <div className="content__container">
                 <div className="content__topic">
                     {this.state.topics.map((topic, idx) => <Topic key={topic.id}  {...topic} type="问答" />)}
                 </div>

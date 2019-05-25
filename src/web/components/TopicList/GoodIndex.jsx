@@ -4,6 +4,7 @@ import PageDevice from "../PageDevice/index";
 import {
     actionGood
 } from "../../actions/index"
+import "./index.css";
 class GoodIndex extends Component {
     constructor(props) {
         super(props);
@@ -37,7 +38,7 @@ class GoodIndex extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="content__container">
                 <div className="content__topic">
                     {this.state.topics.map((topic, idx) => <Topic key={topic.id}  {...topic} type="精华" />)}
                 </div>

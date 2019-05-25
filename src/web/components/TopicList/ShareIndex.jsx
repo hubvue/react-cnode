@@ -3,7 +3,8 @@ import Topic from "../Topic/index";
 import PageDevice from "../PageDevice/index";
 import {
     actionShare
-} from "../../actions/index"
+} from "../../actions/index";
+import "./index.css";
 class ShareIndex extends Component {
     constructor(props) {
         super(props);
@@ -37,7 +38,7 @@ class ShareIndex extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="content__container">
                 <div className="content__topic">
                     {this.state.topics.map((topic, idx) => <Topic key={topic.id}  {...topic} type="分享" />)}
                 </div>

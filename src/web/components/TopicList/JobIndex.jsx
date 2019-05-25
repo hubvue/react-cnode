@@ -4,6 +4,7 @@ import PageDevice from "../PageDevice/index";
 import {
     actionJob
 } from "../../actions/index"
+import "./index.css";
 class JobIndex extends Component {
     constructor(props) {
         super(props);
@@ -37,7 +38,7 @@ class JobIndex extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="content__container">
                 <div className="content__topic">
                     {this.state.topics.map((topic, idx) => <Topic key={topic.id}  {...topic} type="招聘" />)}
                 </div>

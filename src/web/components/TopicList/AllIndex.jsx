@@ -4,7 +4,7 @@ import PageDevice from "../PageDevice/index";
 import {
     actionTopics
 } from "../../actions/index"
-
+import "./index.css";
 
 class AllIndex extends Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class AllIndex extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="content__container">
                 <div className="content__topic" >
                     {this.state.topics.map((topic, idx) => <Topic key={topic.id}  {...topic} />)}
                 </div>
