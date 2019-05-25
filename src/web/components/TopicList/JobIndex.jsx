@@ -13,7 +13,7 @@ class JobIndex extends Component{
             this.setState({
                 topics: data.data,
             });
-            props.setData(0,data.data);
+            props.setData(1,data.data);
         })
     }
 

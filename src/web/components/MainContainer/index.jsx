@@ -10,8 +10,15 @@ import ShareIndex from "../../containers/TopicList/ShareIndex";
 class MainContainer extends Component {
     constructor(props) {
         super(props);
+        this.setPageToState = this.setPageToState.bind(this);
+        this.state = {
+            page: 0,
+            cate:'all'
+        }
     }
-    
+    setPageToState(){
+
+    }
     render() {
         return (
             <main className="main">
@@ -19,7 +26,7 @@ class MainContainer extends Component {
                     <div className="content">
                         <NavBar/>
                         <Switch>
-                            <Route exact path="/"  component={AllIndex} />
+                            <Route exact path="/"  component={AllIndex}/>
                             <Route path="/good" component={GoodIndex} />
                             <Route path="/share" component={ShareIndex} />
                             <Route path="/ask" component={AskIndex} />

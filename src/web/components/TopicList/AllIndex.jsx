@@ -1,5 +1,6 @@
 import React, { Component, Suspense } from "react";
 import Topic from "../Topic/index";
+import PageDevice from "../PageDevice/index";
 class AllIndex extends Component {
     constructor(props) {
         super(props);
@@ -10,15 +11,18 @@ class AllIndex extends Component {
             this.setState({
                 topics: data.data,
             });
-            props.setData(0,data.data);
+            props.setData(1, data.data);
         })
     }
     render() {
 
         let topics = this.state.topics.map((topic, idx) => <Topic key={topic.id}  {...topic} />)
         return (
-            <div className="content__topic" topics={topics}>
-                {topics}
+            <div>
+                <div className="content__topic" topics={topics}>
+                    {topics}
+                </div>
+                <PageDevice />
             </div>
         )
     }

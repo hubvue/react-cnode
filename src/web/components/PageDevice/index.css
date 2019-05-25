@@ -1,0 +1,25 @@
+:root{
+    --btn-size-w:80px;
+    --btn-size-h:30px;
+}
+.page__container{
+    margin-top:20px;
+    padding:20px 20px;
+    border-radius: 0 0 5px 5px;
+    position:relative;
+    & .page__button{
+        width:var(--btn-size-w);
+        height:var(--btn-size-h);
+        border:0;
+        box-shadow:0 0 2px 0 rgba(0,0,0,.5);
+        cursor: pointer;
+        position:absolute;
+        top:0;
+    }
+    & .page_left{
+        left:20px;
+    }
+    & .page_right {
+        right:20px;
+    }
+}

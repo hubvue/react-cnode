@@ -16,24 +16,24 @@ const initial = {
 
     ],
     Topics: {
-        page: 0,
+        page: 1,
         data: []
     },
     topicCategory: {
         job: {
-            page: 0,
+            page: 1,
             data: []
         },
         good: {
-            page: 0,
+            page: 1,
             data: []
         },
         share: {
-            page: 0,
+            page: 1,
             data: []
         },
         ask: {
-            page: 0,
+            page: 1,
             data: []
         },
     },
