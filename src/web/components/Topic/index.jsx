@@ -1,23 +1,23 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 import "./index.css";
 const Topic = (props) => {
     return (
         <div className="topic__item">
-            <a href={"/users/" + props.author.id} className="item__image">
+            <Link to={"/user/" + props.author.loginname} className="item__image">
                 <img src={props.author.avatar_url} alt={props.author.loginname} title={props.author.loginname}/>
-            </a>
-            <div className="item__num">
+            </Link>
+            {props.reply_count ? <div className="item__num">
                 <span title="回复数">{props.reply_count}</span>/
                 <span title="点击数">{props.visit_count}</span>
-            </div>
-            <div className={ props.type ? "item_category" : props.top ? "item_category" : "item_category item_category_usual" }>{props.type ? props.type : props.top? "置顶": cateChange(props.tab)}</div>
+            </div> : "" }
+           {props.tab ?  <div className={ props.type ? "item_category" : props.top ? "item_category" : "item_category item_category_usual" }>{props.type ? props.type : props.top? "置顶": cateChange(props.tab)}</div> : ""}
             <p className="item__title">
-                <a href={"/acticle/" + props.id}>
+                <Link to={"/acticle/" + props.id}>
                     {props.title}
-                </a>            
+                </Link>            
             </p>
-            <p className="item__newreply">{newReplyTime(props.create_at)}</p>
+            <p className="item__newreply">{newReplyTime(props.last_reply_at)}</p>
         </div>
     )
 }

@@ -15,7 +15,7 @@ class JobIndex extends Component {
         props.topics.data.length !== 0 ? this.setState({
             topics: props.data
 
-        }) : fetch("http://127.0.0.1:8080/topics/job").then(res => res.json()).then(data => {
+        }) : fetch("http://127.0.0.1:8080/api/topics/job").then(res => res.json()).then(data => {
             this.setState({
                 topics: data.data,
             });
@@ -25,7 +25,7 @@ class JobIndex extends Component {
     }
     dispathChain(page) {
         this.props.setData((dispatch, getState) => {
-            fetch(`http://127.0.0.1:8080/topics/job?page=${page}`).then(res => res.json()).then(data => {
+            fetch(`http://127.0.0.1:8080/api/topics/job?page=${page}`).then(res => res.json()).then(data => {
                 document.documentElement.scrollTop=0;
                 dispatch(actionJob(page, data.data));
                 let Topics = getState().topicCategory.job;

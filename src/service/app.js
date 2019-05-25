@@ -20,13 +20,13 @@ app.use(staticFile(__dirname));
 app.use(historyApiFallback({
     whiteList:[
         '/',
-        '/topics',
-        '/topics/ask',
-        '/topics/share',
-        '/topics/job',
-        '/topics/good',
-        '/topic/:id',
-        '/user/:id'
+        '/api/topics',
+        '/api/topics/ask',
+        '/api/topics/share',
+        '/api/topics/job',
+        '/api/topics/good',
+        '/api/acticle/:id',
+        '/api/user/:id'
     ]
 }))
 //日志

@@ -17,8 +17,7 @@ const Hander = () => {
                 <nav>
                     <ul className="navBar__nav">
                         <li><a href="/" rel="noopener noreferrer">首页</a></li>
-                        <li><a href="#" rel="noopener noreferrer">新手入门</a></li>
-                        <li><a href="#" rel="noopener noreferrer">关于</a></li>
+                        <li><a href="https://github.com/hubvue" rel="noopener noreferrer">关于</a></li>
                     </ul>
                 </nav>
             </div>

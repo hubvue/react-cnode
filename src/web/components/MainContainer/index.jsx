@@ -7,6 +7,7 @@ import AskIndex from "../../containers/TopicList/AskIndex"
 import GoodIndex from "../../containers/TopicList/GoodIndex";
 import JobIndex from "../../containers/TopicList/JobIndex";
 import ShareIndex from "../../containers/TopicList/ShareIndex";
+import User from "../User/index";
 class MainContainer extends Component {
     constructor(props) {
         super(props);
@@ -31,6 +32,7 @@ class MainContainer extends Component {
                             <Route path="/share" component={ShareIndex} />
                             <Route path="/ask" component={AskIndex} />
                             <Route path="/job" component={JobIndex} />
+                            <Route path="/user/:name" component={User}/>
                         </Switch>
                     </div>
                 </div>

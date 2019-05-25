@@ -24,7 +24,6 @@
   "homepage": "https://github.com/hubvue/react-cnode#readme",
   "dependencies": {
     "koa": "^2.7.0",
-    "koa-history-api-fallback": "^1.0.0",
     "koa-simple-router": "^0.2.0",
     "koa-static": "^5.0.0",
     "koa-views": "^6.2.0",

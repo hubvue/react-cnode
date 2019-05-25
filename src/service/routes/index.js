@@ -13,12 +13,12 @@ module.exports = (app) => {
         _.get('/', async ctx => {
             await ctx.render('index');
         });
-        _.get('/topics', topicController.actionIndex());
-        _.get('/topics/ask', topicController.actionAsk());
-        _.get('/topics/share', topicController.actionShare());
-        _.get('/topics/job', topicController.actionJob());
-        _.get('/topics/good', topicController.actionGood());
-        _.get('/topic/:id', articController.actionDetail());
-        _.get('/user/:id', userController.actionUser());
+        _.get('/api/topics', topicController.actionIndex());
+        _.get('/api/topics/ask', topicController.actionAsk());
+        _.get('/api/topics/share', topicController.actionShare());
+        _.get('/api/topics/job', topicController.actionJob());
+        _.get('/api/topics/good', topicController.actionGood());
+        _.get('/api/acticle/:id', articController.actionDetail());
+        _.get('/api/user/:id', userController.actionUser());
     }));
 };
