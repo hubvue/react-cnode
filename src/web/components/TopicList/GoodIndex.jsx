@@ -18,10 +18,9 @@ class GoodIndex extends Component{
     }
 
     render(){
-        let topics = this.state.topics.map((topic,idx) => <Topic key={topic.id}  {...topic} type="精华"/> )
         return (
             <div className="content__topic">
-                {topics}
+                {this.state.topics.map((topic,idx) => <Topic key={topic.id}  {...topic} type="精华"/> )}
             </div>
         )
     }

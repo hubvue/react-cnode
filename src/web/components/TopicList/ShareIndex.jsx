@@ -18,10 +18,9 @@ class ShareIndex extends Component{
     }
 
     render(){
-        let topics = this.state.topics.map((topic,idx) => <Topic key={topic.id}  {...topic} type="分享"/> )
         return (
             <div className="content__topic">
-                {topics}
+                { this.state.topics.map((topic,idx) => <Topic key={topic.id}  {...topic} type="分享"/> )}
             </div>
         )
     }

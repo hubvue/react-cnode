@@ -14,11 +14,14 @@ const mapStateToProps = (state,props) => {
 const mapDispatchToProps = (dispatch,props) => {
     return {
         setData: (page,data) => {
-            dispatch(actionTopics(page,data));
+            if(typeof page === 'function'){
+                dispatch(page);
+            }else {
+                dispatch(actionTopics(page,data));
+            }
         }
     }
 }
-
 
 
 
