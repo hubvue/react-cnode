@@ -20,7 +20,12 @@ module.exports = merge([
             contentBase: './dist',
             writeToDisk: true,          //写到硬盘里
             // historyApiFallback: true,   //HTML5 History API
-            overlay:true                //在浏览器上显示错误
+            overlay:true,                //在浏览器上显示错误
+            proxy: {
+                "/topics":{
+                    target: "http://127.0.0.1:8080"
+                }
+            }
         }
     }),
     parts.loadCSS({

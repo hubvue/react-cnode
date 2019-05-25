@@ -3,7 +3,9 @@ import Topic from "../Topic/index";
 import PageDevice from "../PageDevice/index";
 import {
     actionTopics
-}from "../../actions/index"
+} from "../../actions/index"
+
+
 class AllIndex extends Component {
     constructor(props) {
         super(props);
@@ -19,15 +21,17 @@ class AllIndex extends Component {
         });
         this.dispathChain = this.dispathChain.bind(this);
     }
-    dispathChain(page){
-        this.props.setData(function(){
-            console.log(1);
-            return (dispatch,getState) => {
-                fetch(`http://127.0.0.1:8080/topics?page=${page}`).then(res=>res.json).then(data => {
-                    dispatch(actionTopics(page,data.data));
-                    console.log(getState().Topics);
-                }) 
-            }
+    dispathChain(page) {
+        this.props.setData((dispatch, getState) => {
+            fetch(`http://127.0.0.1:8080/topics?page=${page}`).then(res => res.json()).then(data => {
+                document.documentElement.scrollTop=0;
+                dispatch(actionTopics(page, data.data));
+                let Topics = getState().Topics;
+                this.setState({
+                    topics:Topics.data,
+                    page:Topics.page
+                })
+            })
         })
     }
     render() {
@@ -36,11 +40,10 @@ class AllIndex extends Component {
                 <div className="content__topic" >
                     {this.state.topics.map((topic, idx) => <Topic key={topic.id}  {...topic} />)}
                 </div>
-                <PageDevice 
-                    cate="all"
+                <PageDevice
                     pageNum={this.state.pageNum}
                     dispathChain={this.dispathChain}
-                    />
+                />
             </div>
         )
     }

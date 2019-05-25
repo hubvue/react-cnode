@@ -12,8 +12,12 @@ const mapStateToProps = (state,props) => {
 };
 const mapDispatchToProps = (dispatch,props) => {
     return {
-        setData: (page, data) => {
-            dispatch(actionAsk(page, data));
+        setData: (page,data) => {
+            if(typeof page === 'function'){
+                dispatch(page);
+            }else {
+                dispatch(actionAsk(page,data));
+            }
         }
     }
 }

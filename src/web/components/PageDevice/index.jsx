@@ -1,14 +1,11 @@
 import React, {useRef, useState,useEffect} from "react";
 import "./index.css";
 
-const PageDecive = ({pageNum,cate,dispathChain}) => {
+const PageDecive = ({pageNum,dispathChain}) => {
     let btnRef = useRef(null);
     let [page,setPage] = useState(pageNum);
-    console.log(typeof dispathChain);
     useEffect(()=> {
         if(page !== 1){
-            console.log(typeof dispathChain);
-
             btnRef.current.removeAttribute('disabled');
         }else {
             btnRef.current.setAttribute("disabled","disabled");

@@ -16,8 +16,12 @@ const mapStateToProps = (state,props) => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        setData: (page, data) => {
-            dispatch(actionShare(page, data));
+        setData: (page,data) => {
+            if(typeof page === 'function'){
+                dispatch(page);
+            }else {
+                dispatch(actionShare(page,data));
+            }
         }
     }
 }
