@@ -42,4 +42,16 @@
 .reply__container{
     background-color: #fff;
     border-radius:6px;
+    margin-top:20px;
+    & .replay__num{
+        padding:10px;
+        border-radius: 6px 6px 0 0;
+        font-size:14px;
+        background-color:#f6f6f6;
+        color:#333;
+    }
+    & .replay__content{
+        background-color:#fff;
+        border-radius:0 0 6px 6px;
+    }
 }

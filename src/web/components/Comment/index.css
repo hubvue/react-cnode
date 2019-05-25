@@ -1,0 +1,35 @@
+.replay_c {
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+
+  & img {
+    width: 30px;
+    height: 30px;
+  }
+
+  & .replay__infor {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  & .replay__box{
+      flex:2;
+  }
+
+  & .replay__count {
+    width: 100px;
+  }
+}
+
+.replay__infor > span {
+  margin-right: 5px;
+  font-weight: 700;
+}
+.replay__count > span {
+    color:gray;
+    font-size:15px;
+}
+.replay__count > span:before{
+    content:"\f087";
+    margin-right:3px;
+}

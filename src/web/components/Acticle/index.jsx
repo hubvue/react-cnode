@@ -1,5 +1,7 @@
 import React, { Suspense } from "react";
 import { useFetch } from "react-hooks-fetch";
+import Comment from "../Comment/index";
+import _ from "../../utils/index";
 import "./md.css";
 import "./index.css";
 const Acticle = (props) => {
@@ -10,20 +12,21 @@ const Acticle = (props) => {
     if (!data) {
         return "此文章已删除";
     }
-    console.log(data);
     return (
         <div className="acticle__container">
             <div className="acticle__informance">
                 <header className="actitle__header">
                     <div className="actitle__title">
-                        <span className="item_category">置顶</span>
-                        <span>服务器迁移至 aws 日本机房</span>
+                        <span className="item_category">
+                            {data.data.top ? "置顶" : _.cateChange(data.data.tab)}
+                        </span>
+                        <span>{data.data.title}</span>
                     </div>
                     <ul className="actitle__release">
-                        <li>发布于 7 个月前 </li>
-                        <li> 作者 alsotang</li>
-                        <li>56827 次浏览</li>
-                        <li>来自 分享</li>
+                        <li>发布于 {_.newReplyTime(data.data.create_at)} </li>
+                        <li> 作者 {data.data.loginname}</li>
+                        <li>{data.data.visit_count} 次浏览</li>
+                        <li>来自 {_.cateChange(data.data.tab)}</li>
                     </ul>
 
                 </header>
@@ -31,7 +34,10 @@ const Acticle = (props) => {
                 </div>
             </div>
             <div className="reply__container">
-
+                <div className="replay__num">{data.data.replies.length} 回复</div>
+                <div className="replay__content">
+                    {data.data.replies.map((replay,idx) => <Comment key={replay.id} {...replay} num={idx+1}/>)}
+                </div>
             </div>
         </div>
     )
