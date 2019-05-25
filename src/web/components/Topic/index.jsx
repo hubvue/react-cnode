@@ -7,7 +7,7 @@ const Topic = (props) => {
             <Link to={"/user/" + props.author.loginname} className="item__image">
                 <img src={props.author.avatar_url} alt={props.author.loginname} title={props.author.loginname}/>
             </Link>
-            {props.reply_count ? <div className="item__num">
+            {props.reply_count || props.reply_count === 0 ? <div className="item__num">
                 <span title="回复数">{props.reply_count}</span>/
                 <span title="点击数">{props.visit_count}</span>
             </div> : "" }
