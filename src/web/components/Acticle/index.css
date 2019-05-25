@@ -1,0 +1,45 @@
+.acticle__container{
+    background-color:#e1e1e1;
+
+}
+
+.acticle__informance{
+    background-color:#fff;
+    border-radius: 0 0 6px 6px;
+    & .actitle__header{
+        padding:10px;
+
+    }
+}
+.actitle__header{
+    border-bottom: 1px solid #e6e6e6;
+    & .actitle__title{
+        margin: 8px 0;
+        font-size:22px;
+        line-height:130%;
+    }
+    & span:nth-child(1){
+        font-size:12px;
+        background-color:#80bd01;
+        color:#fff;
+        border-radius:2px;
+        padding:2px 3px;
+        margin-right:20px;
+    }
+}
+.actitle__release {
+    list-style-type: disc;
+    display:flex;
+    align-items:center;
+    & li {
+        margin-left:20px;
+        color:#ccc;
+        font-size:12px;
+    }
+}
+
+
+.reply__container{
+    background-color: #fff;
+    border-radius:6px;
+}
