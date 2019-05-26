@@ -5,7 +5,7 @@ import "./index.css";
 const Topic = (props) => {
     return (
         <div className="topic__item">
-            <Link to={"/cnode/user/" + props.author.loginname} className="item__image">
+            <Link to={"/user/" + props.author.loginname} className="item__image">
                 <img src={props.author.avatar_url} alt={props.author.loginname} title={props.author.loginname}/>
             </Link>
             {props.reply_count || props.reply_count === 0 ? <div className="item__num">
@@ -14,7 +14,7 @@ const Topic = (props) => {
             </div> : "" }
            {props.tab ?  <div className={ props.type ? "item_category" : props.top ? "item_category" : "item_category item_category_usual" }>{props.type ? props.type : props.top? "置顶": _.cateChange(props.tab)}</div> : ""}
             <p className="item__title">
-                <Link to={"/cnode/acticle/" + props.id}>
+                <Link to={"/acticle/" + props.id}>
                     {props.title}
                 </Link>            
             </p>
