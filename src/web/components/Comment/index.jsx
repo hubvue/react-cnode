@@ -2,7 +2,6 @@ import React from "react";
 import _ from "../../utils/index";
 import "./index.css";
 const Comment = (props) => {
-    console.log(props);
     return (
         <div className="replay_c">
             <img src={props.author.avatar_url} alt={props.author.loginname} title={props.author.loginname}/>

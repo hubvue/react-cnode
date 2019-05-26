@@ -2,10 +2,11 @@ import React, { Suspense } from "react";
 import { useFetch } from "react-hooks-fetch";
 import Comment from "../Comment/index";
 import _ from "../../utils/index";
+import config from "../../utils/config";
 import "./md.css";
 import "./index.css";
 const Acticle = (props) => {
-    const { error, data } = useFetch(`http://127.0.0.1:8080/api/acticle/${props.match.params.id}`);
+    const { error, data } = useFetch(`${config.url}/acticle/${props.match.params.id}`);
     if (error) {
         return "出错了";
     }

@@ -6,7 +6,7 @@ const Hander = () => {
         <header className="header">
             <div className="header__navBar">
                 <div className="navBar__search">
-                    <a href="/">
+                    <a href="/cnode">
                         <img src="http://static2.cnodejs.org/public/images/cnodejs_light.svg" alt="" />
                         <span className="search_icon"></span>
                     </a>
@@ -16,7 +16,7 @@ const Hander = () => {
                 </div>
                 <nav>
                     <ul className="navBar__nav">
-                        <li><a href="/" rel="noopener noreferrer">首页</a></li>
+                        <li><a href="/cnode" rel="noopener noreferrer">首页</a></li>
                         <li><a href="https://github.com/hubvue" rel="noopener noreferrer">关于</a></li>
                     </ul>
                 </nav>

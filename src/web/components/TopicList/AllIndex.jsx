@@ -4,6 +4,7 @@ import PageDevice from "../PageDevice/index";
 import {
     actionTopics
 } from "../../actions/index"
+import config from "../../utils/config";
 import "./index.css";
 
 class AllIndex extends Component {
@@ -13,7 +14,7 @@ class AllIndex extends Component {
             topics: props.topics.data,
             pageNum: props.topics.page
         }
-        props.topics.data.length !== 0 ? void 0 : fetch("http://127.0.0.1:8080/api/topics").then(res => res.json()).then(data => {
+        props.topics.data.length !== 0 ? void 0 : fetch(`${config.url}/topics`).then(res => res.json()).then(data => {
             this.setState({
                 topics: data.data,
             });
@@ -23,7 +24,7 @@ class AllIndex extends Component {
     }
     dispathChain(page) {
         this.props.setData((dispatch, getState) => {
-            fetch(`http://127.0.0.1:8080/api/topics?page=${page}`).then(res => res.json()).then(data => {
+            fetch(`${config.url}/topics?page=${page}`).then(res => res.json()).then(data => {
                 document.documentElement.scrollTop=0;
                 dispatch(actionTopics(page, data.data));
                 let Topics = getState().Topics;

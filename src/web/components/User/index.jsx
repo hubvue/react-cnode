@@ -2,8 +2,10 @@ import React, { Suspense } from "react";
 import { useFetch } from "react-hooks-fetch";
 import Topic from "../Topic/index"
 import "./index.css";
+import config from "../../utils/config";
+
 const User = (props) => {
-    let { error, data } = useFetch(`http://127.0.0.1:8080/api/user/${props.match.params.name}`)
+    let { error, data } = useFetch(`${config.url}/user/${props.match.params.name}`)
     if (error) {
         return "出错了";
     }

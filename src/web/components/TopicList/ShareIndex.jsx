@@ -4,6 +4,7 @@ import PageDevice from "../PageDevice/index";
 import {
     actionShare
 } from "../../actions/index";
+import config from "../../utils/config";
 import "./index.css";
 class ShareIndex extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ShareIndex extends Component {
         props.topics.data.length !== 0 ? this.setState({
             topics: props.data
 
-        }) : fetch("http://127.0.0.1:8080/api/topics/share").then(res => res.json()).then(data => {
+        }) : fetch(`${config.url}/topics/share`).then(res => res.json()).then(data => {
             this.setState({
                 topics: data.data,
             });
@@ -25,7 +26,7 @@ class ShareIndex extends Component {
     }
     dispathChain(page) {
         this.props.setData((dispatch, getState) => {
-            fetch(`http://127.0.0.1:8080/api/topics/share?page=${page}`).then(res => res.json()).then(data => {
+            fetch(`${config.url}/topics/share?page=${page}`).then(res => res.json()).then(data => {
                 document.documentElement.scrollTop = 0;
                 dispatch(actionShare(page, data.data));
                 let Topics = getState().topicCategory.share;
